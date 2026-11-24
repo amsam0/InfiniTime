@@ -37,8 +37,8 @@ WatchFaceDigital::WatchFaceDigital(Controllers::DateTime& dateTimeController,
   statusIcons.Create();
     
   background = lv_obj_create(lv_scr_act(), nullptr);
-  lv_obj_set_style_local_bg_color(timebar, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0xf9f9ed));
-  lv_obj_set_style_local_radius(timebar, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 0);
+  lv_obj_set_style_local_bg_color(background, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0xf9f9ed));
+  lv_obj_set_style_local_radius(background, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 0);
   lv_obj_set_size(background, 240, 240);
   lv_obj_align(background, nullptr, LV_ALIGN_IN_TOP_LEFT, 0, 0);
 
