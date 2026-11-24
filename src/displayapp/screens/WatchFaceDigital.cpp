@@ -35,6 +35,12 @@ WatchFaceDigital::WatchFaceDigital(Controllers::DateTime& dateTimeController,
     statusIcons(batteryController, bleController, alarmController) {
 
   statusIcons.Create();
+    
+  background = lv_obj_create(lv_scr_act(), nullptr);
+  lv_obj_set_style_local_bg_color(timebar, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0xf9f9ed));
+  lv_obj_set_style_local_radius(timebar, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 0);
+  lv_obj_set_size(background, 240, 240);
+  lv_obj_align(background, nullptr, LV_ALIGN_IN_TOP_LEFT, 0, 0);
 
   notificationIcon = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_color(notificationIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_LIME);
