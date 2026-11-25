@@ -39,9 +39,13 @@ namespace Pinetime {
                          Controllers::SimpleWeatherService& weather);
         ~WatchFaceDigital() override;
 
+        bool OnTouchEvent(TouchEvents event) override;
+
         void Refresh() override;
 
       private:
+        void SetColors();
+
         Utility::DirtyValue<std::chrono::time_point<std::chrono::system_clock, std::chrono::minutes>> currentDateTime {};
         Utility::DirtyValue<uint32_t> stepCount {};
         Utility::DirtyValue<uint8_t> heartbeat {};
