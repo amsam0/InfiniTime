@@ -51,6 +51,8 @@ namespace Pinetime {
 
         Utility::DirtyValue<std::chrono::time_point<std::chrono::system_clock, std::chrono::days>> currentDate;
 
+        bool darkMode = true;
+
         lv_obj_t* background;
         lv_obj_t* label_time;
         lv_obj_t* label_time_ampm;
