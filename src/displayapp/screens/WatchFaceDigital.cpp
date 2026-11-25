@@ -94,7 +94,7 @@ WatchFaceDigital::~WatchFaceDigital() {
   lv_obj_clean(lv_scr_act());
 }
 
-bool WatchFacePrideFlag::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
+bool WatchFaceDigital::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   if ((event == Pinetime::Applications::TouchEvents::LongTap)) {
     darkMode = !darkMode;
     SetColors();
